@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @author randretsa
  */
 public class Connexion {
-    static String user = "railway";
+    static String user = "postgres";
     static String password = "LBIiDZEFTwSQD6xKyc8q";
     static String database = "railway";
     Connection connect;
