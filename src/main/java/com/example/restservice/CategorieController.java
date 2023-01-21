@@ -46,9 +46,12 @@ import org.springframework.web.multipart.MultipartFile;
 public class CategorieController  {
 
 	@GetMapping("/categors")
-	public ResponseEntity<Object> getCategories() throws Exception{
-            
+	public ResponseEntity<Object> getCategories() throws Exception{            
             return new ResponseEntity<>(Categorie.getListCategorie(), HttpStatus.OK);
+	} 
+	@GetMapping("/categorie/{id}")
+	public ResponseEntity<Object> getProduit(@PathVariable int id) throws Exception{            
+            return new ResponseEntity<>(ProduitDao.getProduitBy(id), HttpStatus.OK);
 	} 
         @GetMapping("/compte/lister")
 	public ResponseEntity<Object> getListe() throws Exception{            
